@@ -24,7 +24,7 @@ add_action('elementor_pro/forms/new_record', function($record, $handler) {
     // Define the sendCurlRequest function inside the main function
     function sendCurlRequest($queryData, $action, $method = "crm.lead")
     {
-        $endpoint = "https://enfield-royal.bitrix24.com/rest/1398/vyu0z55o0z2lqg6p/";
+        $endpoint = "API";
         $queryUrl = $endpoint . "/$method.$action/";
         $curl = curl_init();
         curl_setopt_array($curl, [
