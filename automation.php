@@ -48,7 +48,7 @@ add_action('elementor_pro/forms/new_record', function($record, $handler) {
         'SOURCE_ID' => "93"
     ];
 
-    $data['select'] = ["ID", "UF_CRM_1677498079"];
+    $data['select'] = ["ID", "ID_of_the_field"];
 
     $queryData = http_build_query($data);
 
@@ -56,7 +56,7 @@ add_action('elementor_pro/forms/new_record', function($record, $handler) {
 
     // URL's
     $pagesubmitted = $_SERVER['HTTP_REFERER'];
-    $url_field = isset($result_data['result'][0]["UF_CRM_1677498079"]) ? $result_data['result'][0]["UF_CRM_1677498079"] : [];
+    $url_field = isset($result_data['result'][0]["ID_of_the_field"]) ? $result_data['result'][0]["ID_of_the_field"] : [];
     $url_link = array_merge($url_field, [$pagesubmitted]);
     $url_link = array_unique($url_link);
 
@@ -66,7 +66,7 @@ add_action('elementor_pro/forms/new_record', function($record, $handler) {
         'COMMENTS' => $message,
         'SOURCE_ID' => "93",
         "UF_CRM_1676875706" => [768],
-        "UF_CRM_1677498079" => $url_link
+        "ID_of_the_field" => $url_link
     ];
     $data['fields']['PHONE'] = [
         ["VALUE" => $number, "VALUE_TYPE" => 'WORK']
